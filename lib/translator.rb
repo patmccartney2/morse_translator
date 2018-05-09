@@ -1,7 +1,5 @@
-class Translator
 
-  def initialize
-    @dictionary = {"a" => ".-",
+      dictionary = {"a" => ".-",
                     "b" => "-...",
                     "c" => "-.-.",
                     "d" => "-..",
@@ -38,5 +36,10 @@ class Translator
                     "9" => "----.",
                     "0" => "-----",
                     " " => " "}
+class Translator
+  def eng_to_morse(english_string)
+    english_string.split(" ").map{ |code|dictionary.index}.join(" ")
   end
 end
+
+translator.eng_to_morse("hello world")
